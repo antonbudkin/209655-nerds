@@ -1,12 +1,121 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML Academy: Нёрдс</title>
+	</head>
+	<body>
+		<header class="main-header">
+			<nav class="main-navigation">
+				<img src="images/logo.svg" alt="Логотип студии «Нёрдс»">
+				<ul class="site-navigation">	
+					<li><a href="studio.html">Студия</a></li>
+					<li><a href="clients.html">Клиенты</a></li>
+					<li><a href="shop.html">Магазин</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+					<li><a href="basket.html">Корзина</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="container">
+			<h1 class="visually-hidden">Дизайн-студия "Нёрдс"</h1>
+			<div class="slider">
+				<h2 class="visually-hidden">Слайдер</h2>
+				<b>Долго, дорого, скрупулезно.</b>
+				<p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+				<a href="#" class="button">УЗНАТЬ БОЛЬШЕ</a>
+				<!-- Здесь будет слайдер с фоновым изображением,но я не знаю как его делать пока -->
+			</div>
+			<section class="services">
+				<h2 class="visually-hidden">Услуги</h2>
+				<ul class="services-list">
+					<li class="services-item">
+						<h3>ВЕБ-САЙТЫ</h3>
+						<p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+						<a href="#" class="button">ЗАКАЗАТЬ</a>
+					</li>
+					<li>
+						<h3>ПРИЛОЖЕНИЯ</h3>
+						<p>Покорите топ-10 приложений в AppStore и Google Play</p>
+						<a href="#" class="button">ЗАКАЗАТЬ</a>
+					</li>
+					<li>
+						<h3>ПРЕЗЕНТАЦИИ</h3>
+						<p>Вы даже не подозреваете, насколько вы изумительны!</p>
+						<a href="#" class="button">ЗАКАЗАТЬ</a>
+					</li>
+				</ul>
+			</section>
+			<section class="info">
+				<h2 class="visually-hidden">О нас</h2>
+				<b>
+					Мы маленькая, но гордая<br>
+					дизайн-студия из Краснодара.
+				</b>
+				<p>
+					Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива.
+					Работаем не покладая рук, как роботы.
+				</p>
+				<ul class="orders">
+					<li class="order-item">Веб-сайтов любой сложности</li>
+					<li class="order-item">Мобильных приложений для IOS и Android </li>
+					<li class="order-item">Слайдшоу и видео для корпоративных презентаций</li>
+				</ul>
+				<div class="statistics">
+					<img src="#" alt="Красочный логотип компании">
+					<p>с 2004 года любим точность во всем:</p>
+					<table>
+						<tr>
+							<td>146%</td>
+							<td>100%</td>
+							<td>50%</td>
+						</tr>
+						<tr>
+							<td>Уровень самоотдачи</td>
+							<td>Соблюдение сроков</td>
+							<td>Минимальная предоплата</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section class="partners">
+				<ul class="partners-list">
+					<li class="partners-item"><a href="https://htmlacademy.ru/">
+						<img src="#" alt="HtmlAcademy">
+					</a></li>
+					<li class="partners-item"><a href="#">
+						<img src="#" alt="barbershop Borodinski">
+					</a></li>
+					<li class="partners-item"><a href="#">
+						<img src="#" alt="Pink">
+					</a></li>
+					<li class="partners-item"><a href="#">
+						<img src="#" alt="Mishka">
+					</a></li>
+				</ul>
+			</section>
+		</main>
+		<footer class="main-footer">
+			<div class="map"></div>
+				<!--тут должна быть карта!!!-->
+			<p class="footer-contacts">
+				<b>NЁRDS DESIGN STUDIO</b> <br>
+				191186, Санкт-Петербург,<br>
+				ул. Б.Конюшенная, д. 19/8<br>
+				тел. +7 (812) 275-75-75<br>
+			</p>
+			<!--про "НАПИШИТЕ НАМ" ничего не сказано в styleguide. Это кнопка все таки?
+				вероятно тут будет форма-->
+			<a href="#" class="button">НАПИШИТЕ НАМ</a>
+			<div class="footer-social">
+				<ul>
+					<li><a class="social-button" href="#">Вконтакте</a></li>
+					<li><a class="social-button" href="#">Фэйсбук</a></li>
+					<li><a class="social-button" href="#">Инстаграм</a></li>
+				</ul>
+				<b>Давайте дружить, это выгодно!</b>
+				<p>Скидка 10% для друзей из социальных сетей.</p>
+			</div> 
+		</footer>
+	</body>
 </html>
