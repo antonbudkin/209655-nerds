@@ -8,11 +8,13 @@
 	<body>
 		<header class="main-header">
 			<nav class="main-navigation">
-				<img src="images/logo.png" alt="Логотип студии «Нёрдс»">
+				<a href="index.html">
+					<img src="images/logo.png" alt="Логотип студии «Нёрдс»">
+				</a>
 				<ul class="site-navigation">	
 					<li><a href="studio.html">Студия</a></li>
 					<li><a href="clients.html">Клиенты</a></li>
-					<li><a class="site-navigation-current" href="shop.html">Магазин</a></li>
+					<li><a class="site-navigation-current" href="catalog.html">Магазин</a></li>
 					<li><a href="contacts.html">Контакты</a></li>
 					<li><a href="basket.html">Корзина</a></li>
 				</ul>
@@ -28,65 +30,63 @@
 			</section>
 			<section class="catalog">
 				<h2 class="visually-hidden">Список шаблонов</h2>
-				<p>Сортировать</p>
-				<ul class="catalog-criterion">
-					<li class="catalog-criterion-current"><a href="#">по цене</a></li>
-					<li><a href="">по типу</a></li>
-					<li><a href="">по названию</a></li>
-				</ul>
+				<div class="sorting">
+					<p>Сортировать</p>
+					<ul class="catalog-criterion">
+						<li class="catalog-criterion-current"><a href="#">по цене</a></li>
+						<li><a href="#">по типу</a></li>
+						<li><a href="#">по названию</a></li>
+						<li><a href="#"><img src="#" alt="стрелка вниз"></a></li>
+						<li><a href="#"><img src="#" alt="стрелка вниз"></a></li>
+					</ul>
+				</div>
 				<ul class="catalog-list">
 					<li class="catalog-item-current">
-						<h3 class="visually-hidden">Информационный сайт для туристов Sedona</h3>
 						<img src="#" alt="Информационный сайт для туристов">
 						<div class="price">
-							<b>sedona</b>
+							<h3>sedona</h3>
 							<p>Информационный сайт для туристов</p>
-							<p><a href="#" class="button">9 900</a></p>
+							<a href="#" class="button">9 900</a>
 						</div>
 					</li>
 					<li class="catalog-item">
-						<h3 class="visually-hidden">Приложение для телефона Pink</h3>
 						<img src="#" alt="Продуктовый лендинг приложения для iOS и Android">
 						<div class="price">
-							<b>pink</b>
+							<h3>pink</h3>
 							<p>Продуктовый лендинг приложения для iOS и Android</p>
-							<p><a href="#" class="button">9 900</a></p>
+							<a href="#" class="button">9 900</a>
 						</div>
 					</li>
 					<li class="catalog-item">
-						<h3 class="visually-hidden">barbershop Borodinski</h3>
 						<img src="#" alt="Сайт-визитка крутого барбершопа Borodinski">
 						<div class="price">
-							<b>borodinski</b>
+							<h3>borodinski</h3>
 							<p>Сайт-визитка крутого барбершопа Borodinski</p>
-							<p><a href="#" class="button">9 900</a></p>
+							<a href="#" class="button">9 900</a>
 						</div>
 					</li>
 					<li class="catalog-item">
-						<h3 class="visually-hidden">handmade-студия Mishka</h3>
 						<img src="#" alt="handmade-студия вязания Mishka">
 						<div class="price">
-							<b>mishka</b>
+							<h3>mishka</h3>
 							<p>handmade-студия вязания Mishka</p>
-							<p><a href="#" class="button">9 900</a></p>
+							<a href="#" class="button">9 900</a>
 						</div>
 					</li>
 					<li class="catalog-item">
-						<h3 class="visually-hidden">ВУЗ для дистанционного обучения Academy</h3>
 						<img src="#" alt="ВУЗ для дистанционного обучения Academy">
 						<div class="price">
-							<b>academy</b>
-							<p>ВУЗ для дистанционного обучения Academy</p>
-							<p><a href="#" class="button">9 900</a></p>
+							<h3>academy</h3>
+							<p>ВУЗ для дистанционного обучения Academy</p>h3
+							<a href="#" class="button">9 900</a>
 						</div>
 					</li>
 					<li class="catalog-item">
-						<h3 class="visually-hidden">производитель крафтового кваса Кваст</h3>
 						<img src="#" alt="производитель крафтового кваса Кваст">
 						<div class="price">
-							<b>кваст</b>
+							<h3>кваст</h3>
 							<p>производитель крафтового кваса Кваст</p>
-							<p><a href="#" class="button">9 900</a></p>
+							<a href="#" class="button">9 900</a>
 						</div>
 					</li>
 				</ul>
@@ -99,17 +99,20 @@
 			</section>
 		</main>
 		<footer class="main-footer">
-			<div class="map"></div>
+			<div class="map">
 				<!--тут должна быть карта!!!-->
-			<p class="footer-contacts">
-				<b>NЁRDS DESIGN STUDIO</b> <br>
-				191186, Санкт-Петербург,<br>
-				ул. Б.Конюшенная, д. 19/8<br>
-				тел. +7 (812) 275-75-75<br>
-			</p>
+			</div>
+			<section class="footer-contacts">
+				<p class="footer-contacts-info">
+					<b>NЁRDS DESIGN STUDIO</b> <br>
+					191186, Санкт-Петербург,<br>
+					ул. Б.Конюшенная, д. 19/8<br>
+					тел. +7 (812) 275-75-75<br>
+				</p>
 			<!--про "НАПИШИТЕ НАМ" ничего не сказано в styleguide. Это кнопка все таки?
 				вероятно тут будет форма-->
 			<a href="#" class="button">НАПИШИТЕ НАМ</a>
+			</section>
 			<div class="footer-social">
 				<ul>
 					<li><a class="social-button" href="#">Вконтакте</a></li>
