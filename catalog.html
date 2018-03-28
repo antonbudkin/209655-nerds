@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>nerds</title>
+		<title>HTML Academy: Нёрдс</title>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -16,17 +16,70 @@
 					<li><a href="clients.html">Клиенты</a></li>
 					<li><a class="site-navigation-current" href="catalog.html">Магазин</a></li>
 					<li><a href="contacts.html">Контакты</a></li>
-					<li><a href="basket.html">Корзина</a></li>
-				</ul>
+				</ul>	
+					<a class="basket-link" href="basket.html">Корзина</a>
 			</nav>
 		</header>
 		<main class="container">
 			<h1 class="page-title">Магазин готовых шаблонов</h1>
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтр товаров</h2>
-				<p>Стоимость</p>
-				<!-- Здесь будет форма -->
-				<a href="#" class="button">ПОКАЗАТЬ</a>
+				<form class="filter" method="get" action="https://echo.htmlacademy.ru">
+					<fieldset>
+						<legend>Стоимость</legend>
+						<label for="price-filter">
+							<span class="visually-hidden">фильтрация товаров по цене</span>
+						</label>
+						<input type="range" name="price" id="price-filter" min="0" max="15000" step="100">
+						<label for="price-from">от</label>
+						<input type="text" name="price-difference" id="price-from" placeholder="0">
+						<label for="price-before">до</label>
+						<input type="text" name="price-difference" id="price-before" placeholder="15000">	
+					</fieldset>
+					<fieldset>
+						<legend>Сетка:</legend>
+						<ul>
+							<li class="filter-option">
+								<input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+								<label for="filter-adaptive">Адаптивная</label>
+							</li>
+							<li class="filter-option">
+								<input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="fixed" id="filter-fixed">
+								<label for="filter-fixed">Фиксированная</label>
+							</li>
+							<li class="filter-option">
+								<input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="rubber" id="filter-rubber">
+								<label for="filter-rubber">Резиновая</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>Особенности:</legend>
+						<ul>
+							<li class="filter-option">
+								<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="slider" checked id="filter-slider">
+								<label for="filter-slider">Слайдер</label> 
+							</li>
+							<li class="filter-option">
+								<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="advantages" id="filter-advantages">
+								<label for="filter-advantages">Блок преимуществ</label> 
+							</li>
+							<li class="filter-option">
+								<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="news" checked id="filter-news">
+								<label for="filter-news">Новости</label> 
+							</li>
+							<li class="filter-option">
+								<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="gallery" id="filter-gallery">
+								<label for="filter-gallery">Галерея</label> 
+							</li>
+							<li class="filter-option">
+								<input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="basket" id="filter-basket">
+								<label for="filter-basket">Корзина</label> 
+							</li>
+						</ul>
+					</fieldset>
+					<button type="submit" class="filter-button button">Показать</button>
+				</form>
 			</section>
 			<section class="catalog">
 				<h2 class="visually-hidden">Список шаблонов</h2>
@@ -44,7 +97,9 @@
 					<li class="catalog-item-current">
 						<img src="img/sedona-catalog.jpg" alt="Информационный сайт для туристов">
 						<div class="price">
-							<h3>sedona</h3>
+							<a href="#">
+								<h3>sedona</h3>
+							</a>
 							<p>Информационный сайт для туристов</p>
 							<a href="#" class="button">9 900</a>
 						</div>
@@ -52,7 +107,9 @@
 					<li class="catalog-item">
 						<img src="img/pink-catalog.jpg" alt="Продуктовый лендинг приложения для iOS и Android">
 						<div class="price">
-							<h3>pink</h3>
+							<a href="#">
+								<h3>pink</h3>
+							</a>	
 							<p>Продуктовый лендинг приложения для iOS и Android</p>
 							<a href="#" class="button">9 900</a>
 						</div>
@@ -60,7 +117,9 @@
 					<li class="catalog-item">
 						<img src="img/barbershop-catalog.jpg" alt="Сайт-визитка крутого барбершопа Borodinski">
 						<div class="price">
-							<h3>borodinski</h3>
+							<a href="#">
+								<h3>borodinski</h3>
+							</a>	
 							<p>Сайт-визитка крутого барбершопа Borodinski</p>
 							<a href="#" class="button">9 900</a>
 						</div>
@@ -68,7 +127,9 @@
 					<li class="catalog-item">
 						<img src="img/mishka-catalog.jpg" alt="handmade-студия вязания Mishka">
 						<div class="price">
-							<h3>mishka</h3>
+							<a href="#">
+								<h3>mishka</h3>
+							</a>		
 							<p>handmade-студия вязания Mishka</p>
 							<a href="#" class="button">9 900</a>
 						</div>
@@ -76,15 +137,19 @@
 					<li class="catalog-item">
 						<img src="img/aplus-catalog.jpg" alt="ВУЗ для дистанционного обучения Academy">
 						<div class="price">
-							<h3>academy</h3>
-							<p>ВУЗ для дистанционного обучения Academy</p>h3
+							<a href="#">
+								<h3>academy</h3>
+							</a>	
+							<p>ВУЗ для дистанционного обучения Academy</p>
 							<a href="#" class="button">9 900</a>
 						</div>
 					</li>
 					<li class="catalog-item">
 						<img src="img/kvast-catalog.jpg" alt="производитель крафтового кваса Кваст">
 						<div class="price">
-							<h3>кваст</h3>
+							<a href="#">
+								<h3>кваст</h3>
+							</a>	
 							<p>производитель крафтового кваса Кваст</p>
 							<a href="#" class="button">9 900</a>
 						</div>
@@ -100,7 +165,7 @@
 		</main>
 		<footer class="main-footer">
 			<div class="map">
-				<img src="img/map.jpg" alt="карта проезда">
+				<img src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"">
 				<!--тут должна быть карта!!!-->
 			</div>
 			<section class="footer-contacts">
@@ -111,9 +176,7 @@
 					ул. Б.Конюшенная, д. 19/8<br>
 					тел. +7 (812) 275-75-75<br>
 				</p>
-			<!--про "НАПИШИТЕ НАМ" ничего не сказано в styleguide. Это кнопка все таки?
-				вероятно тут будет форма-->
-			<a href="#" class="button">НАПИШИТЕ НАМ</a>
+			<a href="feedback.html" class="feedback-link">НАПИШИТЕ НАМ</a>
 			</section>
 			<div class="footer-social">
 				<ul>
@@ -125,5 +188,25 @@
 				<p>Скидка 10% для друзей из социальных сетей.</p>
 			</div> 
 		</footer>
+		<section class="modal modal-feedback">
+			<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+				<h2>Напишите нам</h2>
+				<p>
+					<label for="feedback-name">Ваше имя:</label>
+					<input class="feedback-icon-name" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+				</p>
+				<p>
+					<label for="feedback-mail">Ваш e-mail:</label>
+					<input class="feedback-icon-mail" type="email" name="mail" id="feedback-mail" placeholder="email@example.com">
+				</p>
+				<p>
+					<label for="feedback-letter">Текст письма:</label> 
+					<textarea class="feedback-icon-letter" name="letter" rows="4" cols="20" id="feedback-letter">В свободной форме</textarea>
+				</p>
+				<button class="button" type="submit">Отправить</button>
+			</form>
+			<!-- тут будет форма-->
+			<button class="modal-close" type="button">Закрыть</button>
+		</section>
 	</body>
 </html>

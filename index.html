@@ -13,8 +13,8 @@
 					<li><a href="clients.html">Клиенты</a></li>
 					<li><a href="catalog.html">Магазин</a></li>
 					<li><a href="contacts.html">Контакты</a></li>
-					<li><a href="basket.html">Корзина</a></li>
-				</ul>
+				</ul>	
+					<a class="basket-link" href="basket.html">Корзина</a>
 			</nav>
 		</header>
 		<main class="container">
@@ -100,7 +100,7 @@
 			<section class="partners">
 				<h2 class="visually-hidden">Наши партнеры</h2>
 				<ul class="partners-list">
-					<li class="partners-item"><a href="https://htmlacademy.ru/">
+					<li class="partners-item"><a href="https://htmlacademy.ru/intensive/htmlcss">
 						<img src="img/html-logo.png" alt="HtmlAcademy">
 					</a></li>
 					<li class="partners-item"><a href="#">
@@ -117,7 +117,7 @@
 		</main>
 		<footer class="main-footer">
 			<div class="map">
-				<img src="img/map.jpg" alt="карта проезда">
+				<img src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"">
 				<!--тут должна быть карта!!!-->
 			</div>
 			<section class="footer-contacts">
@@ -128,7 +128,7 @@
 					ул. Б.Конюшенная, д. 19/8<br>
 					тел. +7 (812) 275-75-75<br>
 				</p>
-			<a href="#" class="button">НАПИШИТЕ НАМ</a>
+			<a href="feedback.html" class="feedback-link">НАПИШИТЕ НАМ</a>
 			</section>
 			<div class="footer-social">
 				<ul>
@@ -140,10 +140,25 @@
 				<p>Скидка 10% для друзей из социальных сетей.</p>
 			</div> 
 		</footer>
-		<section class="feedback">
-			<h2>Напишите нам</h2>
+		<section class="modal modal-feedback">
+			<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+				<h2>Напишите нам</h2>
+				<p>
+					<label for="feedback-name">Ваше имя:</label>
+					<input class="feedback-icon-name" type="text" name="name" id="feedback-name" placeholder="Имя Фамилия">
+				</p>
+				<p>
+					<label for="feedback-mail">Ваш e-mail:</label>
+					<input class="feedback-icon-mail" type="email" name="mail" id="feedback-mail" placeholder="email@example.com">
+				</p>
+				<p>
+					<label for="feedback-letter">Текст письма:</label> 
+					<textarea class="feedback-icon-letter" name="letter" rows="4" cols="20" id="feedback-letter">В свободной форме</textarea>
+				</p>
+				<button class="button" type="submit">Отправить</button>
+			</form>
 			<!-- тут будет форма-->
-			<span class="close">x</span>
+			<button class="modal-close" type="button">Закрыть</button>
 		</section>
 	</body>
 </html>
